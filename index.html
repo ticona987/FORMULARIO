@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro para Primarias</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>REGISTRO PARA PRIMARIAS</h1>
+    </header>
+
+    <form id="formulario-voto">
+        <label for="nombre">Nombre completo:</label><br />
+        <input type="text" id="nombre" maxlength="30" placeholder="Nombre completo" required /><br /><br />
+
+        <label for="telefono">Teléfono:</label><br />
+        <input type="tel" id="telefono" maxlength="8" placeholder="Teléfono" required /><br /><br />
+
+        <label for="identidad">Documento de identidad:</label><br />
+        <select id="identidad" required>
+            <option value="CI">Carnet de identidad</option>
+            <option value="PASAPORTE">Pasaporte</option>
+        </select><br /><br />
+
+        <label for="numero-doc">Número de documento:</label><br />
+        <input type="text" id="numero-doc" maxlength="15" placeholder="CI o Pasaporte" required /><br /><br />
+
+        <label>Género:</label><br />
+        <input type="radio" id="hombre" name="genero" value="hombre" required />
+        <label for="hombre">Hombre</label><br />
+        <input type="radio" id="mujer" name="genero" value="mujer" />
+        <label for="mujer">Mujer</label><br /><br />
+
+        <label for="fecha">Fecha de nacimiento:</label><br />
+        <input type="date" id="fecha" required /><br /><br />
+
+        <label for="departamento">Departamento:</label><br />
+        <select id="departamento" required>
+            <option value="LP">La Paz</option>
+            <option value="COCH">Cochabamba</option>
+            <option value="OR">Oruro</option>
+            <option value="TA">Tarija</option>
+        </select><br /><br />
+
+        <label>Elige un candidato:</label><br />
+
+        <div class="candidatos-container">
+            <label>
+                <input type="radio" name="candidato" value="c1" required />
+                <img src="img/arce.jpg" alt="Luis Arce" />
+                <span>Luis Arce</span>
+            </label>
+            <label>
+                <input type="radio" name="candidato" value="c2" />
+                <img src="img/evo.jpg" alt="Evo Morales" />
+                <span>Evo Morales</span>
+            </label>
+            <label>
+                <input type="radio" name="candidato" value="c3" />
+                <img src="img/samuel.jpg" alt="Samuel Doria Medina" />
+                <span>Samuel Doria Medina</span>
+            </label>
+            <label>
+                <input type="radio" name="candidato" value="c4" />
+                <img src="img/tuto.jpg" alt="Tuto Quiroga" />
+                <span>Tuto Quiroga</span>
+            </label>
+        </div>
+
+        <br />
+
+        <button type="submit">Emitir tu voto</button>
+        <p id="contadorVotantes"><strong>Votantes registrados:</strong> 0 / 10</p>
+        <div id="detalleCandidato" style="margin-top: 10px;"></div>
+    </form>
+
+    <br />
+    <button id="terminarVotacion" disabled>Terminar votación</button>
+
+    <div id="resultado"></div>
+
+    <div style="margin-top: 20px;">
+        <label for="tipoGrafico">Tipo de gráfico:</label>
+        <select id="tipoGrafico">
+            <option value="pie">Pastel</option>
+            <option value="bar">Barras</option>
+        </select>
+    </div>
+
+    <div id="grafico" style="max-width: 500px; margin: auto; margin-top: 20px;"></div>
+    <div id="detalleCandidato" style="margin-top: 15px; font-style: italic;"></div>
+    <div id="ganadorFinal" style="margin-top: 20px; font-weight: bold;"></div>
+
+    <script src="votacion.js"></script>
+</body>
+</html>
