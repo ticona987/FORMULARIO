@@ -1,0 +1,181 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ffcfe7;
+    color: #444;
+    margin: 20px;
+    padding: 0;
+}
+
+header h1 {
+    text-align: center;
+    color: #4d2770;
+    margin-bottom: 5px;
+}
+
+form#formulario-voto {
+    background: #f0f4f8;
+    border-radius: 12px;
+    padding: 20px 30px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    box-shadow: 0 4px 10px rgba(100, 120, 150, 0.1);
+}
+
+form#formulario-voto label {
+    font-weight: 600;
+    color: #6a8caf;
+}
+
+form#formulario-voto input[type="text"],
+form#formulario-voto input[type="tel"],
+form#formulario-voto input[type="date"],
+form#formulario-voto select {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    border: 1px solid #c4d0db;
+    background: #ffffff;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+form#formulario-voto input[type="text"]:focus,
+form#formulario-voto input[type="tel"]:focus,
+form#formulario-voto input[type="date"]:focus,
+form#formulario-voto select:focus {
+    border-color: #90aadc;
+    outline: none;
+}
+
+form#formulario-voto input[type="radio"] {
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+form#formulario-voto button[type="submit"] {
+    background-color: #a8dadc;
+    color: #1d3557;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form#formulario-voto button[type="submit"]:hover:not(:disabled) {
+    background-color: #457b9d;
+    color: white;
+}
+
+#terminarVotacion {
+    display: block;
+    margin: 0 auto 20px;
+    background-color: #f7cac9;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #6b4226;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#terminarVotacion:disabled {
+    background-color: #e3ded8;
+    cursor: not-allowed;
+}
+
+#terminarVotacion:hover:not(:disabled) {
+    background-color: #d98585;
+    color: white;
+}
+
+/* Contenedor de candidatos en fila */
+form#formulario-voto label {
+    cursor: pointer;
+}
+
+.candidatos-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.candidatos-container label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f1c2e6;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0 22px 67px rgba(0,0,0,0.07);
+    transition: box-shadow 0.3s;
+    width: 110px;
+}
+
+.candidatos-container label:hover {
+    box-shadow: 0 4px 12px rgba(24, 18, 18, 0.15);
+}
+
+/* Fotos redondas */
+.candidatos-container img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 8px;
+    border: 2px solid #a8dadc;
+    transition: border-color 0.3s;
+}
+
+.candidatos-container input[type="radio"]:checked + img {
+    border-color: #457b9d;
+}
+
+/* Ajustar el texto del candidato */
+.candidatos-container span {
+    font-weight: 600;
+    color: #334e68;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Contador votantes */
+#contadorVotantes {
+    text-align: center;
+    font-weight: 600;
+    color: #6a8caf;
+    margin-top: 10px;
+}
+
+/* Resultado y ganador */
+#resultado, #ganadorFinal {
+    text-align: center;
+    font-size: 18px;
+    color: #334e68;
+    margin-top: 15px;
+}
+
+/* Detalle candidato */
+#detalleCandidato {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #627d98;
+    font-style: italic;
+    font-size: 15px;
+    padding: 10px 15px;
+    background: #96a3ee;
+    border-radius: 8px;
+}
+
+/* Gráfico centrado */
+#grafico {
+    max-width: 600px;
+    margin: 20px auto;
+}
