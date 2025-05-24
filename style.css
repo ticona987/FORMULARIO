@@ -96,14 +96,11 @@ form#formulario-voto button[type="submit"]:hover:not(:disabled) {
 }
 
 /* Contenedor de candidatos en fila */
-form#formulario-voto label {
-    cursor: pointer;
-}
-
 .candidatos-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    gap: 15px;
+    gap: 20px;
     margin-bottom: 20px;
 }
 
@@ -117,6 +114,7 @@ form#formulario-voto label {
     box-shadow: 0 22px 67px rgba(0,0,0,0.07);
     transition: box-shadow 0.3s;
     width: 110px;
+    cursor: pointer;
 }
 
 .candidatos-container label:hover {
@@ -178,4 +176,16 @@ form#formulario-voto label {
 #grafico {
     max-width: 600px;
     margin: 20px auto;
+}
+
+/* Responsive en celular */
+@media screen and (max-width: 600px) {
+    .candidatos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .candidatos-container label {
+        width: 80%;
+    }
 }
